@@ -45,7 +45,7 @@ FORBIDDEN_URLS = [
 	"admin", "login", "logout", "documents", "information_pages", "minutes", "polls", "list", "view_as", "abbreviation_explanation",
 	"menu_items", "menu_item_delete", "menu_item", "create", "edit", "delete", "update_order", "hijack", "unlinked", "revert", "search", "download",
 	"update", "attachment", "no-direct-download", "autosave", "publish", "render", "delete-cascade", "versions", "permissions", "attachments",
-	"shortlink", "shortlinks", "preview", "get", "change", "autosave", "ws",
+	"shortlink", "shortlinks", "preview", "get", "change", "autosave", "ws", "lists",
 ]
 
 ANONYMOUS_GROUP_NAME = "Anonymous"
@@ -93,7 +93,8 @@ INSTALLED_APPS = [
 	'_1327.information_pages',
 	'_1327.minutes',
 	'_1327.polls',
-	'_1327.shortlinks'
+	'_1327.shortlinks',
+	'_1327.lists',
 ]
 
 MIDDLEWARE = [
@@ -264,6 +265,12 @@ STATIC_PRECOMPILER_COMPILERS = [
 
 # Set this to the ID of the document that shall be shown as Main Page
 MAIN_PAGE_ID = -1
+
+# set these in the localsettings.py for a connection to the server running mailman
+# LISTS_HOSTNAME = ''
+# LISTS_USERNAME = ''
+# LISTS_KEY_FILENAME = ''
+# LISTS_KEY_PASSWORD = ''
 
 TESTING = 'test' in sys.argv
 

@@ -1,0 +1,22 @@
+{% extends 'base_without_sidebar.html' %}
+
+{% load i18n %}
+{% load filename %}
+{% load bootstrap3 %}
+
+{% block title %}
+	{% trans "Lists" %}
+{% endblock %}
+
+{% block content %}
+	<ul>
+		{% for list, members in lists_with_members.items %}
+			<li>{{ list }}</li>
+			<ul>
+				{% for member in members %}
+					<li>{{ member }}</li>
+				{% endfor %}
+			</ul>
+		{% endfor %}
+	</ul>
+{% endblock %}

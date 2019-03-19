@@ -4,6 +4,7 @@ from django.contrib.auth import views as auth_views
 from django.urls import include, path, register_converter
 
 from _1327.documents import urls as document_urls
+from _1327.lists import views as lists_views
 from _1327.main import views as main_views
 from _1327.main.utils import SlugWithSlashConverter
 from _1327.shortlinks import views as shortlinks_views
@@ -31,6 +32,8 @@ urlpatterns = [
 	path("shortlinks", shortlinks_views.shortlinks_index, name="shortlinks_index"),
 	path("shortlink/create", shortlinks_views.shortlink_create, name="shortlink_create"),
 	path("shortlink/delete", shortlinks_views.shortlink_delete, name="shortlink_delete"),
+
+	path("lists", lists_views.lists_index, name="lists_index"),
 
 	path("admin/", admin.site.urls),
 	path("hijack/", include("hijack.urls")),
